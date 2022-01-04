@@ -15,6 +15,8 @@ using GPS navigation. This will serve as the foundation for future rover project
 
 ![](/images/CAD_pic1.png)
 
+![](/images/CAD_pic2.png)
+
 The lower plate contains most electrical components, such as the PIXHAWK 4 board, Jetson Nano, and battery pack. These components were placed here in order to be protected from the elements, as they are sensitive and prone to damage. The components on the actual plate of the rover are mostly mounted on additional standoffs in order to minimize interference with one another, but better planning in the future could eliminate this issue.
 The upper plate only contains the GPS module and camera mount. The camera mount consists of a suction cup, which rendered the lower plate unsuitable due to the large number of mounting holes that compromised the suction’s ability to create a vacuum and properly adhere to the surface. Therefore, it was mounted on the top. During initial testing, we found that being in close proximity with other electrical components in the lower plate caused accuracy issues as well as electrical interference, so it was mounted on a mast above the upper plate to eliminate these issues.
 
@@ -37,12 +39,17 @@ Press and hole the R9SX pair button , then connect a external 5V power to R9SX a
 
 
 ### Mission Planner Parameters
-CH5_OPTION was set to the value that corresponds to changing Flight Modes.
-CH6_OPTION was set to 41, for Disarm/Arm.
+1. CH5_OPTION was set to the value that corresponds to changing Flight Modes.
+
+
+2. CH6_OPTION was set to 41, for Disarm/Arm.
 ARMING_REQUIRE was set to 1 instead of 0 so that the user can choose between disarming and arming after the rover is powered on.
-ARMING_RUDDER was set to zero as it was replaced by the physical Arm/Disarm switch. Originally, this default setting would cause the rover to disarm during normal operation.
-WP_SPEED was set to a lower value to ensure that the rover would not become hazardous during autonomous operation.
-WP_RADIUS was set to a lower value so that the rover would be more precise when arriving at a waypoint.
+
+3. ARMING_RUDDER was set to zero as it was replaced by the physical Arm/Disarm switch. Originally, this default setting would cause the rover to disarm during normal operation.
+
+4. WP_SPEED was set to a lower value to ensure that the rover would not become hazardous during autonomous operation.
+
+5. WP_RADIUS was set to a lower value so that the rover would be more precise when arriving at a waypoint.
 
 
 ## FAQ
